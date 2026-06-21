@@ -309,11 +309,14 @@ img{ max-width:100%; display:block; }
   border: 1px solid var(--line-strong);
   box-shadow: 0 30px 60px -20px rgba(0,0,0,0.6);
   background: var(--ink-2);
+  aspect-ratio: 1/1;
 }
 .portrait-img{
   width:100%;
+  height:100%;
   aspect-ratio: 1/1;
   object-fit: cover;
+  object-position: center;
   filter: saturate(0.92) contrast(1.04);
   display:block;
 }
@@ -324,6 +327,8 @@ img{ max-width:100%; display:block; }
   height: 56px;
   background: rgba(11,18,32,0.55);
   backdrop-filter: blur(2px);
+  display:flex;
+  align-items:center;
 }
 .scope path{
   fill:none;
@@ -332,15 +337,18 @@ img{ max-width:100%; display:block; }
 }
 .frame-tag{
   position:absolute;
-  top: 14px; left: 14px;
+  bottom: 8px; left: 10px;
   font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
   color: var(--signal);
-  background: rgba(11,18,32,0.6);
-  padding: 4px 8px;
+  background: rgba(11,18,32,0.75);
+  padding: 3px 7px;
   border-radius: 3px;
   border: 1px solid rgba(95,174,140,0.3);
+  line-height: 1;
+  white-space: nowrap;
+  z-index: 2;
 }
 
 .scroll-cue{
